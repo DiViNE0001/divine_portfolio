@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Raleway:wght@300&display=swap');
+
+@keyframes main-img-animation {
+    0% {
+        transform: scale(1);
+        filter: grayscale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    100% {
+        transform: scale(1);
+        filter: grayscale(1);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(250, 250, 250, 1) 0%, rgba(176, 212, 255, 1) 100%);
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    background-color: rgb(38, 38, 66);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav ul li a:hover {
+    color: rgb(166, 166, 250);
+    scale: 1.02;
+}
+
+.dropdown-content a:hover {
+    color: rgb(80, 5, 131);
+    scale: 1.02;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(250, 250, 250, 1) 0%, rgba(176, 212, 255, 1) 100%);
+    border-radius: 8%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.left {
+    font-size: 2.2rem;
+    font-family: 'Cinzel Decorative', sans-serif;
+    user-select: none;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+    margin-bottom: 16%;
+}
+
+.firstsection>div {
+    width: 30%;
+}
+
+
+.rightsection img {
+    width: 80%;
+    border-radius: 8%;
+    filter: grayscale(1);
+    animation: main-img-animation 5s linear infinite;
+}
+
+.purple {
+    color: rgb(125, 28, 215);
+}
+
+.leftsection {
+    margin: 3%;
+    font-size: 2.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+#element {
+    color: rgb(125, 28, 215);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.button {
+    width: 20%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    background: linear-gradient(to right, black 50%, #e84949 50%);
+    box-shadow: .3rem .3rem .3rem #888888;
+    border-radius: 6px;
+    background-size: 200% 100%;
+    background-position: top right;
+    transition: all .7s ease-out;
+    cursor: pointer;
+}
+
+.button a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: scale(1.07);
+    background-position: left bottom;
+    color: aliceblue;
+}
+
+.line {
+    margin: 0;
+    background: rgb(33, 4, 33);
+    margin: 60px 84px;
+    height: 2px;
+}
+
+.secondsection {
+    max-width: 80vw;
+    margin: auto;
+    height: 30vw
+}
+
+.pre-tag1 {
+    color: rgb(39, 38, 38);
+}
+
+.secondsection h2 {
+    color: black;
+    font-size: 1.8rem;
+}
+
+.secondsection .box {
+    display: flex;
+    background: rgb(36, 2, 47);
+    width: 83vw;
+    height: 2px;
+    margin: 56px 0;
+}
+
+.secondsection .box .vertical {
+    background: rgb(36, 2, 47);
+    height: 93px;
+    width: 1px;
+    margin: 0 160px;
+}
+
+.vertical {
+    color: rgb(45, 2, 45);
+}
+
+.img-top {
+    width: 23px;
+    position: relative;
+    top: -32px;
+    left: -9px;
+}
+
+.vertical-title {
+    position: relative;
+    width: 150px;
+    top: 75px;
+    font-weight: bold;
+}
+
+.vertical-desc {
+    position: relative;
+    top: 130px;
+    font-size: 9px;
+    width: 150px;
+}
+
+.thirdsection {
+    margin: auto;
+    max-width: 80vw;
+    height: 160vh;
+}
+
+.headd {
+    color: black;
+    font-size: 1.8rem;
+}
+
+.project-content {
+    height: 900px;
+}
+
+.background {
+    position: relative;
+    background-color: black;
+    width: 70vw;
+    height: 71vh;
+}
+
+.project-num {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    opacity: 0;
+    top: 11px;
+    right: 20px;
+    font-size: 6rem;
+}
+
+.skills {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+    left: 43px;
+    opacity: 0;
+}
+
+.skills img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.proj-head {
+    font-size: 2rem;
+    position: absolute;
+    top: 30px;
+    left: 45px;
+    z-index: 1;
+    opacity: 0;
+    color: white;
+}
+
+.proj-sub-head {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    top: 140px;
+    font-weight: bold;
+    width: 20%;
+    left: 50px;
+    opacity: 0;
+}
+
+.background img {
+    width: 100%;
+    margin: auto;
+
+    transition: 0.3s ease-in;
+}
+
+.proj-btn {
+    position: absolute;
+    z-index: 1;
+    top: 280px;
+    left: 50px;
+    opacity: 0;
+    box-shadow: none;
+}
+
+.background:hover {
+    .proj1-img {
+        opacity: .2;
+        cursor: pointer;
+    }
+
+    .skills {
+        opacity: 1;
+        animation: fade-in-left 2s forwards;
+    }
+
+    .proj-head {
+        opacity: 1;
+        animation: fade-in-up 1s ease-in-out forwards;
+    }
+
+    .proj-sub-head {
+        opacity: 1;
+        transform: translateX(-50px);
+        animation: fade-in-left 2s forwards;
+    }
+
+    .proj-btn {
+        opacity: 1;
+        animation: fade-in-down 1s ease-in-out forwards;
+    }
+
+    .project-num {
+        opacity: 1;
+        animation: fade-in-right 1s ease-in-out forwards;
+    }
+}
+
+
+.tech-skills {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 16%;
+    height: 70vh;
+}
+
+.left-skills {
+    width: 40%;
+    margin-top: 0;
+}
+
+.left-head {
+    color: black;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.left-sub-head {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    text-align: justify;
+}
+
+.right-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-skills img {
+    width: 50px;
+    height: 50px;
+    margin: 0.4em;
+}
+
+footer {
+    background-color: rgb(38, 38, 66);
+    height: 11rem;
+}
+
+.faded-text {
+    position: absolute;
+    user-select: none;
+    font-size: 5rem;
+    bottom: -385%;
+    left: 0;
+    font-weight: bold;
+    transition: all 3s;
+    color: rgb(194, 190, 190);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.foot {
+    display: flex;
+    padding: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+}
+
+.foot-first {
+    user-select: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.foot-head {
+    font-weight: bold;
+    user-select: none;
+}
+
